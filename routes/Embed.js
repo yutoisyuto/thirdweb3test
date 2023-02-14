@@ -4,8 +4,8 @@ import upbondServices from "lib/UpbondEmbed";
 import { useEffect, useState } from "react";
 import { toast, Toaster } from "react-hot-toast";
 import Web3 from "web3";
-import companySampleLogo from "assets/images/sample-logo/company-logo-sample.png";
-import DefaultProfileImage from "assets/images/default-photo.svg";
+import companySampleLogo from "../assets/images/sample-logo/company-logo-sample.png";
+import DefaultProfileImage from "../assets/images/default-photo.svg";
 // import "./toaster.css";
 /* 
   Read this:
