@@ -21,7 +21,9 @@
     "prepack": "npm run build",
     "lint:ts": "eslint --fix 'src/**/*.ts'",
     "prepare": "husky install",
-    "build:local": "npm run build && node embed-build.js"
+    "build:local": "npm run build && node embed-build.js",
+    "rollup": "rollup -c"
+
   },
   "dependencies": {
     "@metamask/obs-store": "^7.0.0",
