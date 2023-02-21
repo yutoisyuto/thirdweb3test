@@ -8,7 +8,7 @@ import {
 } from "@thirdweb-dev/react";
 import { useRouter } from "next/router";
 import { marketplaceContractAddress } from "../addresses";
-import  Embed from "../routes/Embed"
+import  Embed from "../components/Embed"
 
 const Home: NextPage = () => {
   const router = useRouter();

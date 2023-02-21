@@ -4,9 +4,11 @@ import upbondServices from "lib/UpbondEmbed";
 import { useEffect, useState } from "react";
 import { toast, Toaster } from "react-hot-toast";
 import Web3 from "web3";
-import companySampleLogo from "../assets/images/sample-logo/company-logo-sample.png";
-import DefaultProfileImage from "../assets/images/default-photo.svg";
-// import "./toaster.css";
+import companySampleLogo from "assets/images/sample-logo/company-logo-sample.png";
+import DefaultProfileImage from "assets/images/default-photo.svg";
+import React from "react";
+
+
 /* 
   Read this:
   This concept actually can be also using hooks (functional), you may can decide what you want to do
@@ -32,20 +34,20 @@ const Embed = () => {
 
   const _upbond = upbondServices.upbond.provider;
 
-  useEffect(() => {
-    const rehydrate = async () => {
-      const web3 = new Web3(_upbond);
-      const accs = await web3.eth.getAccounts();
-      console.log(`web3Accounts: `, accs);
-      if (accs.length > 0) {
-        setAccount(accs);
-      }
-    };
+  // useEffect(() => {
+  //   const rehydrate = async () => {
+  //     const web3 = new Web3(_upbond);
+  //     const accs = await web3.eth.getAccounts();
+  //     console.log(`web3Accounts: `, accs);
+  //     if (accs.length > 0) {
+  //       setAccount(accs);
+  //     }
+  //   };
 
-    if (_upbond) {
-      rehydrate();
-    }
-  }, [_upbond]);
+  //   if (_upbond) {
+  //     rehydrate();
+  //   }
+  // }, [_upbond]);
 
 
   useEffect(() => {
@@ -267,7 +269,7 @@ const Embed = () => {
         />
         {account && account.length > 0 ? (
           <div>
-            <p className="text-center">Account : {account}</p>
+            <p className="text-center">Account --------------: {account}</p>
 
             <div className="flex justify-center mt-3 gap-3">
               <button

@@ -4,7 +4,7 @@ import "../styles/globals.css";
 import Head from "next/head";
 import ThirdwebGuideFooter from "../components/ThirdwebGuideFooter";
 import Header from "../components/Header";
-import  Embed from "../routes/Embed"
+import Embed from "../components/Embed";
 
 // This is the chainId your dApp will work on.
 // const activeChainId = ChainId.Goerli;
