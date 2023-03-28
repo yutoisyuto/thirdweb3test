@@ -1,18 +1,20 @@
 import { useAddress, useMetamask, useDisconnect,useWalletConnect } from "@thirdweb-dev/react";
+import { ChainId, ThirdwebProvider } from "@thirdweb-dev/react";
 import Link from "next/link";
 import React from "react";
 import styles from "../styles/Home.module.css";
-import Embed from "../components/Embed";
+// import Embed from "../components/Embed";
 import { useEffect, useState } from "react";
 import Upbond, { UPBOND_BUILD_ENV, BUTTON_POSITION_TYPE,UserInfo } from "@upbond/upbond-embed";
 // import Upbond, { UPBOND_BUILD_ENV, BUTTON_POSITION_TYPE } from "@upbond/upbond-embed";
-import upbondServices from "../lib/UpbondEmbed";
 import { toast, Toaster } from "react-hot-toast";
+import { UpbondEmbedContext } from "../lib/upbondEmbed";
+// import Embed from "../pages/embed";
+import Embed from "./Embed";
 
 
 
-
-export default function Header() {
+export function Header() {
   // Helpful thirdweb hooks to connect and manage the wallet from metamask.
   const address = useAddress(); 
   // const connectWithMetamask = useMetamask();
@@ -33,6 +35,7 @@ export default function Header() {
           </Link>
         </div>
       </div>
+
       <div className={styles.right}>
         {address ? (
           <>
@@ -55,7 +58,8 @@ export default function Header() {
           </a>
         )}
       </div>
-      {address}aaas
+      {address}
+
     </div>
   );
 }
